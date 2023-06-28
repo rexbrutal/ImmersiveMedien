@@ -5,11 +5,23 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     PlayerControls playerControls;
+    AnimatorManager animatorManager;
 
     // Movement variable (up, down, left right)
     public Vector2 movementInput;
+    public Vector2 cameraInput;
+
+    public float cameraInputX;
+    public float cameraInputY;
+
+    private float moveAmount;
     public float verticalInput;
     public float horizontalInput;
+
+    private void Awake()
+    {
+        animatorManager = GetComponent<AnimatorManager>();
+    }
 
     // When the game object attached to it, is enabled
     private void OnEnable()
@@ -21,6 +33,7 @@ public class InputManager : MonoBehaviour
 
             // when WASD or control stick has been inputted, we record the vector2
             playerControls.PlayerMovement.Movement.performed += i => movementInput = i.ReadValue<Vector2>();
+            playerControls.PlayerMovement.Camera.performed   += i => cameraInput   = i.ReadValue<Vector2>();
         }
 
         playerControls.Enable();
@@ -42,5 +55,14 @@ public class InputManager : MonoBehaviour
     {
         verticalInput = movementInput.y;
         horizontalInput = movementInput.x;
+
+        cameraInputY = cameraInput.y;
+        cameraInputX = cameraInput.x;
+
+        // Abs values of the vertical/horizontal because we don't have negative values
+        // we would use negative values if we had sth like strafing, moving backwards while locking on a target
+        // with positive values we basically only run in the direction we look
+        moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
+        animatorManager.UpdateAnimatorValues(0, moveAmount);
     }
 }
