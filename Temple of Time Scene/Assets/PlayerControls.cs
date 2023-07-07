@@ -103,9 +103,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Left stick"",
-                    ""id"": ""1f512085-4ee1-49f6-9738-e67b97df5b7a"",
-                    ""path"": ""2DVector"",
+                    ""name"": ""Left Stick"",
+                    ""id"": ""3bcc4f05-ada6-44e9-9adb-07e77ac25f91"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -115,7 +115,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""bbb141b6-58da-4cb9-afae-cc89ba2d7a0f"",
+                    ""id"": ""8274532d-338d-47b2-9b2d-e5ef859f2f42"",
                     ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -126,7 +126,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""bfb73360-43cf-4748-b050-1d489dc53189"",
+                    ""id"": ""8db85aec-fcd0-4c47-9e80-51d903028ada"",
                     ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -137,7 +137,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""38585301-99f9-4b81-8896-cc879fb46e90"",
+                    ""id"": ""9efe1c4f-ac64-4d1e-99be-78f740c7864d"",
                     ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -148,7 +148,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""3dab8795-4214-4d39-956b-ecca80fb1ade"",
+                    ""id"": ""9d3283ef-c584-4f84-9fa8-79393667c481"",
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
