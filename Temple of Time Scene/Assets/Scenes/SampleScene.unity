@@ -7382,9 +7382,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 0}
   cameraPivot: {fileID: 862332622}
+  cameraTransform: {fileID: 0}
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 65
+  cameraCollisionOffset: 0.2
+  minimumCollisionOffset: 0.2
+  cameraCollisionRadius: 0.2
   cameraFollowSpeed: 0.2
-  cameraLookSpeed: 0.6
-  cameraPivotSpeed: 0.6
+  cameraLookSpeed: 0.4
+  cameraPivotSpeed: 0.4
+  cameraLookSmoothTime: 1
   lookAngle: 0
   pivotAngle: 0
   minimumPivotAngle: -55
